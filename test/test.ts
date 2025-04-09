@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
 import fc from "fast-check";
-import { blake3_derive, blake3_hash, blake3_keyed } from "./mod.ts";
+import { blake3_derive, blake3_hash, blake3_keyed } from "../main.ts";
 import vectors from "./vectors.json" with { type: "json" };
 
 const hex = (string: string) =>
