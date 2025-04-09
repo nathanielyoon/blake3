@@ -6,5 +6,9 @@
       "include": [],
       "exclude": ["ban-types", "no-cond-assign", "no-explicit-any"]
     }
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.12",
+    "fast-check": "npm:fast-check@^4.1.1"
   }
 }

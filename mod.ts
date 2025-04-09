@@ -24,7 +24,7 @@ const PERMUTE = Uint8Array.from(
   (Z) => parseInt(Z, 16) << 2,
 );
 /** Fills a buffer using the Blake3 compression function. */
-export const b3_mix = (
+const b3_mix = (
   state: Uint32Array,
   view: DataView,
   at: number,
@@ -119,7 +119,7 @@ const blake3 = (
   flag: number,
   input: Uint8Array,
   out = 32,
-  at = 0,
+  from = 0,
 ) => {
   const a = [], b = new Uint32Array(key), c = new Uint8Array(Size.BLOCK);
   let d = new DataView(c.buffer), e = 0, f = 0, z = 0, y = 0, x;
@@ -143,7 +143,7 @@ const blake3 = (
     b.set(key), d = merge(a[0], g), e = Size.BLOCK;
   }
   do {
-    b3_mix(b, d, at++, e, x | Flag.ROOT, g), y = min(z + Size.BLOCK, out);
+    b3_mix(b, d, from++, e, x | Flag.ROOT, g), y = min(z + Size.BLOCK, out);
     do h[z] = g[z >> 2 & 15] >> (z << 3); while (++z < y);
   } while (z < out);
   return h;
@@ -163,7 +163,7 @@ export const blake3_keyed = (
   message: Uint8Array,
   out?: number,
 ) => blake3(b_b32(key), Flag.KEYED, message, out);
-/** Derives a key with Blake3, optionally skipping blocks. */
+/** Derives a key with Blake3. */
 export const blake3_derive = (
   context: string,
   message: Uint8Array,
