@@ -1,3 +1,3 @@
 # blake3
 
-full blake3 implementation. 1230 bytes min+gzip.
+blake3 hash/keyed hash/kdf. 1.2kb min+gzip.
