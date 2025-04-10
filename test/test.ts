@@ -1,7 +1,7 @@
 import { assertEquals } from "@std/assert";
 import fc from "fast-check";
 import { blake3_derive, blake3_hash, blake3_keyed } from "../main.ts";
-import vectors from "./vectors.json" with { type: "json" };
+import vectors from "./reference_blake3.json" with { type: "json" };
 
 const hex = (string: string) =>
   Uint8Array.from(string.match(/../g) ?? [], (Z) => parseInt(Z, 16));
