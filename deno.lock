@@ -3,6 +3,7 @@
   "specifiers": {
     "jsr:@nyoon/base@^1.0.4": "1.0.4",
     "jsr:@nyoon/base@^1.0.5": "1.0.5",
+    "jsr:@nyoon/base@^1.0.6": "1.0.6",
     "jsr:@std/assert@^1.0.13": "1.0.13",
     "jsr:@std/internal@^1.0.6": "1.0.8"
   },
@@ -12,6 +13,9 @@
     },
     "@nyoon/base@1.0.5": {
       "integrity": "164a1e5faca5399c510311e818f56e8bc760fd10442c18be5c5e38e726f87160"
+    },
+    "@nyoon/base@1.0.6": {
+      "integrity": "239d531da6c1b6d30c47f9bca14a04a74f9f2f704428fa722f6dd35a62dab3ee"
     },
     "@std/assert@1.0.13": {
       "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",
