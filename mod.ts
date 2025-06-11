@@ -152,14 +152,18 @@ const b_b32 = ($: Uint8Array) => {
   return a;
 };
 /** Hashes with Blake3 (unkeyed). */
-export const blake3_hash = ($: Uint8Array, out?: number) =>
+export const blake3_hash = ($: Uint8Array, out?: number): Uint8Array =>
   blake3(IV, 0, $, out);
 /** Hashes with Blake3 (keyed). */
-export const blake3_keyed = (key: Uint8Array, $: Uint8Array, out?: number) =>
-  blake3(b_b32(key), Flag.KEYED, $, out);
+export const blake3_keyed = (
+  key: Uint8Array,
+  $: Uint8Array,
+  out?: number,
+): Uint8Array => blake3(b_b32(key), Flag.KEYED, $, out);
 /** Derives a key with Blake3, optionally skipping blocks. */
-export const blake3_derive = (context: Uint8Array) => {
+export const blake3_derive = (
+  context: Uint8Array,
+): ($: Uint8Array, out?: number, at?: number) => Uint8Array => {
   const a = b_b32(blake3(IV, Flag.DERIVE_CONTEXT, context));
-  return ($: Uint8Array, out?: number, at?: number) =>
-    blake3(a, Flag.DERIVE_KEY, $, out, at);
+  return ($, at, out) => blake3(a, Flag.DERIVE_KEY, $, out, at);
 };
