@@ -165,5 +165,5 @@ export const blake3_derive = (
   context: Uint8Array,
 ): ($: Uint8Array, out?: number, at?: number) => Uint8Array => {
   const a = b_b32(blake3(IV, Flag.DERIVE_CONTEXT, context));
-  return ($, at, out) => blake3(a, Flag.DERIVE_KEY, $, out, at);
+  return ($, out, at) => blake3(a, Flag.DERIVE_KEY, $, out, at);
 };
