@@ -2,12 +2,16 @@
   "version": "5",
   "specifiers": {
     "jsr:@nyoon/base@^1.0.4": "1.0.4",
+    "jsr:@nyoon/base@^1.0.5": "1.0.5",
     "jsr:@std/assert@^1.0.13": "1.0.13",
     "jsr:@std/internal@^1.0.6": "1.0.8"
   },
   "jsr": {
     "@nyoon/base@1.0.4": {
       "integrity": "8736971c1324625324c52e5ade4190b9404622b2605ebba199bd92b89b3ad4b6"
+    },
+    "@nyoon/base@1.0.5": {
+      "integrity": "164a1e5faca5399c510311e818f56e8bc760fd10442c18be5c5e38e726f87160"
     },
     "@std/assert@1.0.13": {
       "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",

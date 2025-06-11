@@ -1,4 +1,4 @@
-import { s16_b } from "jsr:@nyoon/base@^1.0.4/16";
+import { s16_b } from "jsr:@nyoon/base@^1.0.5/16";
 import { assertEquals } from "jsr:@std/assert@^1.0.13";
 import { blake3_derive, blake3_hash, blake3_keyed } from "./mod.ts";
 
