@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json",
   "name": "@nyoon/blake3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": "./mod.ts",
   "lint": {
     "rules": {
@@ -13,7 +13,7 @@
     "test": "deno test --allow-all --no-check --parallel --doc"
   },
   "imports": {
-    "@nyoon/base": "jsr:@nyoon/base@^1.0.2",
+    "@nyoon/base": "jsr:@nyoon/base@^1.0.3",
     "@std/assert": "jsr:@std/assert@^1.0.13"
   }
 }
